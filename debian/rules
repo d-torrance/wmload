@@ -1,63 +1,40 @@
 #!/usr/bin/make -f
+# Derived from Marcelo's and dh_make's rules files.
 
-package=wmload
-
-SHELL=/bin/sh
-
-export DH_VERBOSE = 1
+#export DH_VERBOSE=1
 
 build: build-stamp
-
 build-stamp:
 	dh_testdir
-	xmkmf -a
-	$(MAKE)
-	touch build-stamp
+	xmkmf
+	$(MAKE) CDEBUGFLAGS="-g -O2 -Wall -fno-strength-reduce"
+	touch $@
 
 clean:
 	dh_testdir
 	dh_testroot
-	-make clean
-	-rm -f build-stamp Makefile
-	dh_clean
+	[ ! -f Makefile ] || $(MAKE) clean
+	dh_clean build-stamp Makefile
 
-binary-indep: build
-#	dh_testdir -i
-#	dh_testroot
-#	dh_clean -i -k
+binary-indep:
+# There aren't any architecture-independent files here.
 
 binary-arch: build
-	dh_testdir -a
+	dh_testdir
 	dh_testroot
-	dh_clean -a -k
-	dh_installdirs -a
-	install -m 755 -s wmload debian/tmp/usr/X11R6/bin/wmload
-	dh_installdocs -a
-	dh_installmenu -a
-	dh_installmanpages -a
-	dh_installchangelogs -a
-	dh_strip -a
-	dh_compress -a
-	dh_fixperms -a
-	dh_installdeb -a
-	dh_shlibdeps -a
-	dh_gencontrol -a -u-isp
-	dh_makeshlibs -a
-	dh_md5sums -a
-	dh_builddeb -a
+	dh_clean -k
+	$(MAKE) install install.man DESTDIR=`pwd`/debian/tmp
+	dh_installdocs README
+	dh_installchangelogs
+	dh_installmenu
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
 
-binary:	binary-indep binary-arch
-
-.PHONY: binary binary-arch binary-indep clean build
-
-# Local variables:
-# mode: makefile
-# mode: font-lock
-# End:
-
-
-
-
-
-
-
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary

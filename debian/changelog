@@ -1,3 +1,21 @@
+wmload (0.9.2-6) unstable; urgency=low
+
+  * NMU... no, MU... uh, no, NMU... :) Returning maintainership to
+    Marcelo with this upload.
+  * Fixed the copyright file (doh!).
+  * Fixed Imakefile, usage of wmload.1x, rules (in sync with wmavgload).
+  * Included some headers in wmload.c to make it compile warningless.
+
+ -- Josip Rodin <jrodin@jagor.srce.hr>  Sat, 25 Dec 1999 17:39:09 +0100
+
+wmload (0.9.2-5) unstable; urgency=low
+
+  * New maintainer.
+  * Redid the packaging, using debhelper. Updated for Policy 3.x.
+  * Beautified description and the manual page. Suggest wmavgload.
+
+ -- Josip Rodin <jrodin@jagor.srce.hr>  Tue, 28 Sep 1999 19:45:28 +0200
+
 wmload (0.9.2-4) frozen unstable; urgency=low
 
   * Wrote a real manpage
@@ -26,5 +44,4 @@ wmload (0.9.2-1) unstable; urgency=low
 Local variables:
 mode: debian-changelog
 mode: auto-fill
-add-log-mailing-address: "mmagallo@debian.org"
 End:

@@ -1,8 +1,16 @@
-This package was debianized by Marcelo E. Magallon
-<mmagallo@efis.ucr.ac.cr> on Fri, 2 Jan 1998 13:42:00 -0600.
+wmload was first debianized by Marcelo E. Magallon on 2 January 1998.
+Later it was maintained by Josip Rodin <jrodin@jagor.srce.hr>.
 
-wmmixer by Sam Hawker, shawkie@geocities.com
-http://www.geocities.com/SiliconValley/Vista/2471/
+Copyright (C) 1996 Beat Christen <bchriste@iiic.ethz.ch> (asload)
+Copyright (C) 1997 Ryan Land <rland@bc1.com>
 
-this software is freely distributable and supplied without warranty
-(express or otherwise)
+  As usual, this software is bound by the GNU General Public License.
+  You can use it however you see fit, as long as all the README's
+  accompany any copy/version of it.
+
+  THE KIND SOLES WHO HAVE WRITTEN/CONTRIBUTED TO THIS SOFTWARE, IN NO
+  WAY ACCEPT LIABILITY OR ANY RESPONSIBILITY FOR THE USE OF, OR FOR
+  ANY CONSEQUENCES RESULTING FROM THE USE OF THIS SOFTWARE.
+
+See the `/usr/share/common-licenses/GPL' file for the complete text
+of the GNU General Public License.
