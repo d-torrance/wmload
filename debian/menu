@@ -1,0 +1,6 @@
+?package(wmload):\
+   needs="x11"\
+   icon="none"\
+   section="Apps/System"\
+   title="WMload"\
+   command="/usr/X11R6/bin/wmload -shape -withdrawn"

@@ -1,0 +1,28 @@
+#! /bin/sh -e
+
+case "$1" in
+  remove)
+    [ -x /usr/bin/update-menus ] && update-menus
+  ;;
+  purge)
+  ;;
+  upgrade)
+    # nothing to do
+  ;;
+  failed-upgrade)
+    # this is an upgrade, and it has failed. What can fail?
+    exit 1
+  ;;
+  abort-install)
+  ;;
+  abort-upgrade)
+  ;;
+  disappear)
+  ;;
+  *)
+    echo "postrm called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+esac
+
+exit 0

@@ -1,0 +1,30 @@
+wmload (0.9.2-4) frozen unstable; urgency=low
+
+  * Wrote a real manpage
+
+ -- Marcelo E. Magallon <mmagallo@debian.org>  Sun, 12 Apr 1998 13:48:21 -0600
+
+wmload (0.9.2-3) unstable; urgency=low
+
+  * Fixed Architecture = any (fixes: bug#17923)
+
+ -- Marcelo E. Magallon <mmagallo@debian.org>  Sun, 15 Feb 1998 13:19:00 -0600
+
+wmload (0.9.2-2) unstable; urgency=low
+
+  * Cleaned rules a bit
+  * Reuploaded including pristine sources
+
+ -- Marcelo E. Magallon <mmagallo@efis.ucr.ac.cr>  Sun, 25 Jan 1998 12:43:59 -0600
+
+wmload (0.9.2-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Marcelo E. Magallon <mmagallo@efis.ucr.ac.cr>  Fri,  2 Jan 1998 14:00:10 -0600
+
+Local variables:
+mode: debian-changelog
+mode: auto-fill
+add-log-mailing-address: "mmagallo@debian.org"
+End:
