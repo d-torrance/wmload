@@ -1,2 +1,2 @@
 ?package(wmload): needs=X11 section="Apps/System" title="wmload" \
- command="/usr/bin/X11/wmload -shape -withdrawn"
+ command="/usr/bin/wmload -shape -withdrawn"

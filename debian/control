@@ -2,18 +2,18 @@ Source: wmload
 Section: x11
 Priority: optional
 Maintainer: Marcelo Magallon <mmagallo@debian.org>
-Build-Depends: libxpm4-dev
-Standards-Version: 3.1.1
+Build-Depends: xlibs-dev, debhelper (>= 3), xutils
+Standards-Version: 3.5.6
 
 Package: wmload
 Architecture: any
 Depends: ${shlibs:Depends}
-Suggests: wmaker, wmavgload
+Suggests: wmaker
 Description: system load monitor designed for Window Maker
  wmload displays a graphical representation of the kernel/system
  statistics on a 64x64 miniwindow. There are three shades in the
  window: the light one, which corresponds to user statistics, second
  is the nice time statistics, and the darkest one is system statistics.
  .
- It works with other window managers, since there isn't actually anything
- in the program to make it require Window Maker, except maybe the look.
+ It works with other window managers, there isn't anything in the program to
+ make it require Window Maker, except maybe the look.
