@@ -23,7 +23,7 @@ binary-arch: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
-	$(MAKE) install install.man DESTDIR=`pwd`/debian/tmp BINDIR=/usr/bin MANPATH=/usr/share/man
+	$(MAKE) install install.man DESTDIR=`pwd`/debian/wmload BINDIR=/usr/bin MANPATH=/usr/share/man
 	dh_installdocs README
 	dh_installchangelogs
 	dh_installmenu

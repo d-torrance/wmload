@@ -1,9 +1,9 @@
 Source: wmload
 Section: x11
 Priority: optional
-Maintainer: Marcelo Magallon <mmagallo@debian.org>
-Build-Depends: xlibs-dev, debhelper (>= 3), xutils
-Standards-Version: 3.5.6
+Maintainer: Marcelo E. Magallon <mmagallo@debian.org>
+Build-Depends: xlibs-dev, debhelper (>= 4), xutils
+Standards-Version: 3.6.2
 
 Package: wmload
 Architecture: any

@@ -1,3 +1,11 @@
+wmload (0.9.2-10) unstable; urgency=low
+
+  * debian/control: b-d on debhelper >= 4
+  * debian/control: standards version 3.6.2
+  * debian/control: Add "E." to my name
+
+ -- Marcelo E. Magallon <mmagallo@debian.org>  Fri, 16 Sep 2005 09:26:55 -0600
+
 wmload (0.9.2-9) unstable; urgency=low
 
   * debian/control: Sigh.  Forgot about xmkmf in xutils.  (closes: bug#123655)
