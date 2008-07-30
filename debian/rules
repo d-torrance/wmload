@@ -3,18 +3,20 @@
 
 #export DH_VERBOSE=1
 
+CFLAGS += -Wall -fno-strength-reduce
+
 build: build-stamp
 build-stamp:
 	dh_testdir
 	xmkmf
-	$(MAKE) CDEBUGFLAGS="-g -O2 -Wall -fno-strength-reduce"
+	$(MAKE) CDEBUGFLAGS="$(CFLAGS)"
 	touch $@
 
 clean:
 	dh_testdir
 	dh_testroot
+	dh_clean Makefile
 	[ ! -f Makefile ] || $(MAKE) clean
-	dh_clean build-stamp Makefile
 
 binary-indep:
 # There aren't any architecture-independent files here.
@@ -27,6 +29,7 @@ binary-arch: build
 	dh_installdocs README
 	dh_installchangelogs
 	dh_installmenu
+	dh_installman
 	dh_strip
 	dh_compress
 	dh_fixperms

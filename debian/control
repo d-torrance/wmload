@@ -1,13 +1,13 @@
 Source: wmload
 Section: x11
 Priority: optional
-Maintainer: Marcelo E. Magallon <mmagallo@debian.org>
-Build-Depends: debhelper (>= 4), xutils, libx11-dev, libxext-dev, libxpm-dev, x-dev
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper (>= 7), xutils-dev, libx11-dev, libxext-dev, libxpm-dev
 Standards-Version: 3.6.2
 
 Package: wmload
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: wmaker
 Description: system load monitor designed for Window Maker
  wmload displays a graphical representation of the kernel/system

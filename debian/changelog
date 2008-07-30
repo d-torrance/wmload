@@ -1,3 +1,13 @@
+wmload (0.9.2-11) unstable; urgency=low
+
+  * QA upload.
+    + Set maintainer to QA group.
+  * Replace xutils with xutils-dev in Build-Depends. (closes: #485240)
+  * Bump debhelper compat level from 4 to 7.
+  * Change menu section to Applications/System/Monitoring.
+
+ -- Frank Lichtenheld <djpig@debian.org>  Wed, 30 Jul 2008 17:42:03 +0200
+
 wmload (0.9.2-10.1) unstable; urgency=low
 
   * Non-maintainer upload.
