@@ -1,7 +1,7 @@
 Source: wmload
 Section: x11
 Priority: optional
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>= 9),
 	       xutils-dev,
 	       libx11-dev,
