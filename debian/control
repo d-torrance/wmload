@@ -8,6 +8,9 @@ Build-Depends: debhelper (>= 9),
 	       libxext-dev,
 	       libxpm-dev
 Standards-Version: 3.9.6
+Homepage: http://windowmaker.org/dockapps/?name=wmload
+Vcs-Browser: https://github.com/d-torrance/wmload
+Vcs-Git: https://github.com/d-torrance/wmload
 
 Package: wmload
 Architecture: any
