@@ -2,7 +2,11 @@ Source: wmload
 Section: x11
 Priority: optional
 Maintainer: Debian QA Group <packages@qa.debian.org>
-Build-Depends: debhelper (>= 7), xutils-dev, libx11-dev, libxext-dev, libxpm-dev
+Build-Depends: debhelper (>= 9),
+	       xutils-dev,
+	       libx11-dev,
+	       libxext-dev,
+	       libxpm-dev
 Standards-Version: 3.6.2
 
 Package: wmload
