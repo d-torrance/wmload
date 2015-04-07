@@ -41,3 +41,10 @@ binary-arch: build
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary
+
+get-orig-source:
+	uscan --verbose --force-download --no-symlink
+	@if test -e ../wmload-*.download ; then \
+		rename -f -v "s/wmload-(.+)\.download/wmload_\1\.orig\.tar\.gz/" \
+			../wmload-*.download; \
+	fi
