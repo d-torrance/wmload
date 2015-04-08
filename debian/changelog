@@ -1,14 +1,25 @@
 wmload (0.9.5-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * New maintainer (Closes: #782111).
   * debian/compat
     - Bump to 9.
   * debian/control
     - Set versioned dependency on debhelper to >=9.
     - Bump Standards-Version to 3.9.6.
     - Add Homepage and Vcs-*.
+  * debian/control
+    - Remove xutils-dev from Build-Depends; not needed as imake is no
+      longer used.
+  * debian/copyright
+    - Convert to DEP5 format; use GPL-1+ since no version number is specified.
+  * debian/patches/bump_POSIX_C_SOURCE.patch
+    - New patch; avoid implicit declaration warning.
+  * debian/patches/fix_unused_result.patch
+    - New patch; fix -Wunused-result compiler warning.
   * debian/rules
     - Add get-orig-source target.
+    - Update to use dh.
   * debian/source/format
     - New file; use 3.0 (quilt).
   * debian/watch
