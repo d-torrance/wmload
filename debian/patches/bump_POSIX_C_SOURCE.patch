@@ -1,0 +1,17 @@
+Description: Bump _POSIX_C_SOURCE to 200112L.
+ Otherwise, we get the following warning during build.
+ wmload.c: In function ‘GetLoad’:
+ wmload.c:523:10: warning: incompatible implicit declaration of built-in function ‘rint’
+    *usr = rint(Maximum * (float)(*usr)   /total);
+           ^
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Last-Update: 2015-04-07
+
+--- a/wmload.c
++++ b/wmload.c
+@@ -1,4 +1,4 @@
+-#define _POSIX_C_SOURCE 199309L
++#define _POSIX_C_SOURCE 200112L
+ 
+ #include <stdio.h>
+ #include <string.h>
