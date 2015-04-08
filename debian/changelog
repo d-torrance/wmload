@@ -1,4 +1,4 @@
-wmload (0.9.5-1) UNRELEASED; urgency=medium
+wmload (0.9.5-1) unstable; urgency=medium
 
   * New upstream release.
   * New maintainer (Closes: #782111).
@@ -25,7 +25,7 @@ wmload (0.9.5-1) UNRELEASED; urgency=medium
   * debian/watch
     - New file.
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Tue, 07 Apr 2015 16:34:05 -0500
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Wed, 08 Apr 2015 06:52:54 -0500
 
 wmload (0.9.2-11) unstable; urgency=low
 
