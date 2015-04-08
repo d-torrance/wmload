@@ -1,1 +1,2 @@
 bump_POSIX_C_SOURCE.patch
+fix_unused_result.patch

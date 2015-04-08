@@ -1,0 +1,27 @@
+Description: Fix -Wunused-result compiler warning.
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Last-Update: 2015-04-07
+
+--- a/wmload.c
++++ b/wmload.c
+@@ -125,7 +125,9 @@
+ 	ruid = getuid();
+ 	euid = geteuid();
+ 	if ( ruid == euid ) {
+-		system( Execute );
++		if (system( Execute ) == -1)
++			fprintf(stderr, "system(%s) returned an error",
++				Execute);
+ 		return;
+ 	}
+ 	pid = fork();
+@@ -151,7 +153,8 @@
+ 				strerror(errno));
+ 		exit(127);
+ 	}
+-	system( Execute );
++	if (system( Execute ) == -1)
++		fprintf(stderr, "system(%s) returned an error", Execute);
+ 	exit(0);
+ }
+ int main(int argc,char *argv[])
