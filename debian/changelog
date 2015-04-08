@@ -30,8 +30,8 @@ wmload (0.9.5-1) UNRELEASED; urgency=medium
 wmload (0.9.2-11) unstable; urgency=low
 
   * QA upload.
-    + Set maintainer to QA group.
-  * Replace xutils with xutils-dev in Build-Depends. (closes: #485240)
+    - Set maintainer to QA group.
+  * Replace xutils with xutils-dev in Build-Depends (Closes: #485240).
   * Bump debhelper compat level from 4 to 7.
   * Change menu section to Applications/System/Monitoring.
 
@@ -40,47 +40,47 @@ wmload (0.9.2-11) unstable; urgency=low
 wmload (0.9.2-10.1) unstable; urgency=low
 
   * Non-maintainer upload.
-  * Update build-deps for xlibs-dev removal; closes: #347118.
+  * Update build-deps for xlibs-dev removal (Closes: #347118).
 
  -- Justin Pryzby <justinpryzby@users.sf.net>  Sat, 14 Jan 2006 15:25:34 -0500
 
 wmload (0.9.2-10) unstable; urgency=low
 
-  * debian/control: b-d on debhelper >= 4
-  * debian/control: standards version 3.6.2
-  * debian/control: Add "E." to my name
+  * debian/control
+    - Bump Build-Depends on debhelper to >= 4.
+    - Bump Standards-Version to 3.6.2.
+    - Add "E." to my name.
 
  -- Marcelo E. Magallon <mmagallo@debian.org>  Fri, 16 Sep 2005 09:26:55 -0600
 
 wmload (0.9.2-9) unstable; urgency=low
 
-  * debian/control: Sigh.  Forgot about xmkmf in xutils.  (closes: bug#123655)
+  * debian/control
+    - Add xutils to Build-Depends (Closes: #123655).
 
  -- Marcelo E. Magallon <mmagallo@debian.org>  Thu, 13 Dec 2001 00:19:33 +0100
 
 wmload (0.9.2-8) unstable; urgency=low
 
-  * debian/control: Build-Depend on debhelper.  See entry for 0.9.2-5, duh.
-    (closes: bug#123199)
+  * debian/control
+    - Add depbhelper to Build-Depends (Closes: #123199).
 
  -- Marcelo E. Magallon <mmagallo@debian.org>  Mon, 10 Dec 2001 09:43:22 +0100
 
 wmload (0.9.2-7) unstable; urgency=low
 
-  * debian/rules: install to /usr, not /usr/X11R6 (closes: bug#122021)
-  * debian/control: Build-Depends xlibs-dev.  Ah! Someone talked sense into
-    Branden...
-  * Suggest wmavgload?  I didn't know Joy was into crack.
-  * debian/control: Proper grammar and unconvoluted style is undervalued
-    nowadays.
+  * debian/rules
+    - Install to /usr, not /usr/X11R6 (Closes: #122021).
+  * debian/control
+    - Add xlibs-dev to Build-Depends xlibs-dev.
+    - Fix grammar and style.
 
  -- Marcelo E. Magallon <mmagallo@debian.org>  Sun,  9 Dec 2001 12:40:10 +0100
 
 wmload (0.9.2-6) unstable; urgency=low
 
-  * NMU... no, MU... uh, no, NMU... :) Returning maintainership to
-    Marcelo with this upload.
-  * Fixed the copyright file (doh!).
+  * Non-maintainer upload.
+  * Fixed the copyright file.
   * Fixed Imakefile, usage of wmload.1x, rules (in sync with wmavgload).
   * Included some headers in wmload.c to make it compile warningless.
 
@@ -89,37 +89,32 @@ wmload (0.9.2-6) unstable; urgency=low
 wmload (0.9.2-5) unstable; urgency=low
 
   * New maintainer.
-  * Redid the packaging, using debhelper. Updated for Policy 3.x.
-  * Beautified description and the manual page. Suggest wmavgload.
+  * Redo the packaging using debhelper. Update for Policy 3.x.
+  * Beautify description and the manual page. Suggest wmavgload.
 
  -- Josip Rodin <jrodin@jagor.srce.hr>  Tue, 28 Sep 1999 19:45:28 +0200
 
 wmload (0.9.2-4) frozen unstable; urgency=low
 
-  * Wrote a real manpage
+  * Write a real manpage.
 
  -- Marcelo E. Magallon <mmagallo@debian.org>  Sun, 12 Apr 1998 13:48:21 -0600
 
 wmload (0.9.2-3) unstable; urgency=low
 
-  * Fixed Architecture = any (fixes: bug#17923)
+  * Fix Architecture = any (Closes: #17923)
 
  -- Marcelo E. Magallon <mmagallo@debian.org>  Sun, 15 Feb 1998 13:19:00 -0600
 
 wmload (0.9.2-2) unstable; urgency=low
 
-  * Cleaned rules a bit
-  * Reuploaded including pristine sources
+  * Clean rules a bit.
+  * Reupload including pristine sources.
 
  -- Marcelo E. Magallon <mmagallo@efis.ucr.ac.cr>  Sun, 25 Jan 1998 12:43:59 -0600
 
 wmload (0.9.2-1) unstable; urgency=low
 
-  * Initial release
+  * Initial release.
 
  -- Marcelo E. Magallon <mmagallo@efis.ucr.ac.cr>  Fri,  2 Jan 1998 14:00:10 -0600
-
-Local variables:
-mode: debian-changelog
-mode: auto-fill
-End:
