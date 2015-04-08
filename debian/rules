@@ -1,46 +1,10 @@
 #!/usr/bin/make -f
-# Derived from Marcelo's and dh_make's rules files.
 
-#export DH_VERBOSE=1
+%:
+	dh $@
 
-CFLAGS += -Wall -fno-strength-reduce
-
-build: build-stamp
-build-stamp:
-	dh_testdir
-	xmkmf
-	$(MAKE) CDEBUGFLAGS="$(CFLAGS)"
-	touch $@
-
-clean:
-	dh_testdir
-	dh_testroot
-	dh_clean Makefile
-	[ ! -f Makefile ] || $(MAKE) clean
-
-binary-indep:
-# There aren't any architecture-independent files here.
-
-binary-arch: build
-	dh_testdir
-	dh_testroot
-	dh_clean -k
-	$(MAKE) install install.man DESTDIR=`pwd`/debian/wmload BINDIR=/usr/bin MANPATH=/usr/share/man
-	dh_installdocs README
-	dh_installchangelogs
-	dh_installmenu
-	dh_installman
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary
+override_dh_auto_install:
+	dh_auto_install -- PREFIX=/usr
 
 get-orig-source:
 	uscan --verbose --force-download --no-symlink
