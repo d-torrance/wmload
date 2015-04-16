@@ -5,11 +5,14 @@ Description: Bump _POSIX_C_SOURCE to 200112L.
     *usr = rint(Maximum * (float)(*usr)   /total);
            ^
 Author: Doug Torrance <dtorrance@monmouthcollege.edu>
-Last-Update: 2015-04-07
+Last-Update: 2015-04-15
 
 --- a/wmload.c
 +++ b/wmload.c
-@@ -1,4 +1,4 @@
+@@ -18,7 +18,7 @@
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. */
+ 
 -#define _POSIX_C_SOURCE 199309L
 +#define _POSIX_C_SOURCE 200112L
  
